@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "tsc": "./node_modules/.bin/tsc",
+    "dev": "./node_modules/.bin/nodemon --watch './**/*.ts' --exec 'ts-node --type-check' ./src/server.ts"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
+    "@types/express-graphql": "^0.9.0",
     "@types/graphql": "^14.5.0",
     "@types/graphql-upload": "^8.0.7",
+    "@types/helmet": "^4.0.0",
     "@types/node": "^16.11.11",
     "nodemon": "^2.0.15",
     "ts-node": "^10.4.0",
@@ -15,7 +21,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
     "graphql": "^16.0.1",
-    "graphql-upload": "^13.0.0"
+    "graphql-upload": "^13.0.0",
+    "helmet": "^4.6.0"
   }
 }
