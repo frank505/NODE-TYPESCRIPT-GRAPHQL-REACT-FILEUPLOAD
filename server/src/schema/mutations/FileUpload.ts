@@ -1,5 +1,4 @@
 import { fileRenamer } from './../../helpers/fileHelperFunc';
-import 'reflect-metadata';
 import {GraphQLScalarType, GraphQLString} from "graphql";
 import path from "path";
 import * as fs from "fs";

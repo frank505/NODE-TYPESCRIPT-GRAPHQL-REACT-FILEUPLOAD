@@ -1,6 +1,6 @@
 import express from 'express';
-import * as helmet from "helmet";
-import * as cors from "cors";
+import  helmet from "helmet";
+import  cors from "cors";
 import path from "path";
 import * as graphqlHTTP from 'express-graphql';
 import {schema} from './schema'
@@ -38,8 +38,6 @@ export default class Server
                 graphiql: true,
             })
         );
-
-
     }
 
 
