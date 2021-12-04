@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLID, GraphQLString,GraphQLBoolean,GraphQLInt,GraphQLScalarType } from "graphql";
+import { GraphQLObjectType, GraphQLID, GraphQLString,GraphQLBoolean,GraphQLInt,GraphQLScalarType, GraphQLList } from "graphql";
 
 
 
@@ -26,6 +26,9 @@ export const UploadType = new GraphQLScalarType({
         return file;
     }
 });
+
+
+
 
 
 

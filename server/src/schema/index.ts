@@ -1,11 +1,12 @@
 import { GET_ALL } from './query/FileUploadQuery';
-import { FILE_UPLOAD } from './mutations/FileUpload';
+import { FILE_UPLOAD, MULTIPLE_FILE_UPLOAD } from './mutations/FileUpload';
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
 
 const RootMutation = new GraphQLObjectType({
     name: "Mutation",
     fields:{
-        fileUpload:FILE_UPLOAD
+        fileUpload:FILE_UPLOAD,
+        multipleFileUpload:MULTIPLE_FILE_UPLOAD
     }
 });
 

@@ -29,7 +29,6 @@ export default class Server
         this.app.use(express.urlencoded({extended:true}));
         this.app.use(cors());
         this.app.use(helmet({ contentSecurityPolicy: (process.env.NODE_ENV === 'production') ? undefined : false }));
-        this.app.use('/img',express.static(path.join(__dirname, 'public/uploads/gallery')));
         this.app.use(
             "/graphql",
             graphqlUploadExpress({ maxFileSize: 10000000, maxFiles: 10 }),
