@@ -1,11 +1,11 @@
 import { gql } from "@apollo/client";
 
-export const FILE_UPLOAD_MUTATION = gql`
-  mutation loginAdmin(
-    $file: Upload!
+export const FILE_UPLOAD= gql`
+  mutation fileUpload(
+    $file: Uploads!
   ) {
     fileUpload(
-      file: $file
+      file: $file,
     ) {
        success,message,errorStatus,error,token
     }
