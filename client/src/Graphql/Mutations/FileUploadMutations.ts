@@ -11,3 +11,15 @@ export const FILE_UPLOAD= gql`
     }
   }
 `;
+
+export const MULTIPLE_FILE_UPLOAD=gql`
+mutation multipleFileUpload(
+  $file: [Uploads!]!
+) {
+  multipleFileUpload(
+    file: $file,
+  ) {
+     success,message,errorStatus,error,token
+  }
+}
+`;

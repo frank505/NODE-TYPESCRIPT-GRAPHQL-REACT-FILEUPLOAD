@@ -46,8 +46,28 @@ export const MULTIPLE_FILE_UPLOAD:any = {
     },
     async resolve(parent:any, args:IFormParams,context:any)
     {
-        console.log(args);
+     // console.log(args.file);
+     args.file.map(async (item:any,index:number)=>
+     {
+       let fileProps = await item.promise;
+       const { createReadStream,filename, mimetype } = fileProps;
+        const stream = createReadStream();
+        console.log(stream);
+        const uniqueName:string =  fileRenamer(filename);
+        const pathName = path.join(__dirname, '../../files/'+uniqueName);
+        await stream.pipe(fs.createWriteStream(pathName));
+
+     })
+
+        return {
+            success:true,
+            message:'file uploaded successfully'
+        }
+
+
     }
+
+
 }
 
 
